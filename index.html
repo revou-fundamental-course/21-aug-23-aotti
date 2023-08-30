@@ -3,22 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> RevoU SEFC Mini Project </title>
 </head>
 <body>
     <!-- HEADER -->
-    <header>
-
+    <header class="bg-blue">
+        <div class="display-flex display-block-s flex-between pad-2 border-bottom">
+            <a href="#" class="mar-left-4">
+                <img src="assets/revo.png" alt="Logo" width="80">
+            </a>
+            <nav id="navMenu" class="display-flex display-none-s flex-around align-items-center width-50 width-s-75 mar-right-4">
+                <a href="#banner" class="display-block-s text-deco-none text-center color-white font-bold border border-bottom-s border-rad-left pad-top-2 pad-bottom-2 pad-top-s-2 pad-bottom-s-2 width-25 width-s-75"> Home </a>
+                <a href="#ourprofile" class="display-block-s text-deco-none text-center color-white font-bold border border-bottom-s pad-top-2 pad-bottom-2 pad-top-s-2 pad-bottom-s-2 width-25 width-s-75"> Our Profile </a>
+                <a href="#ourfacilities" class="display-block-s text-deco-none text-center color-white font-bold border border-bottom-s pad-top-2 pad-bottom-2 pad-top-s-2 pad-bottom-s-2 width-25 width-s-75"> Our Facilities </a>
+                <a href="#messageus" class="display-block-s text-deco-none text-center color-white font-bold border border-rad-right pad-top-2 pad-bottom-2 pad-top-s-2 pad-bottom-s-2 width-25 width-s-75"> Message Us </a>
+            </nav>
+            <a href="javascript:void(0);" id="hamburger" class="icon display-none display-block-s bg-green border-rad pad-2 mar-top-3 mar-right-3">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main>
-
+    <main class="bg-wheat pad-top-4">
+        <!-- SECTION 1 -->
+        <div class="width-100 mar-bottom-4 border-bottom">
+            <h2 id="banner">
+                <a href="#banner" class="display-block cursor-default text-deco-none color-black font-size-2 mar-left-4"> 
+                    Hi <span id="username">~</span>, Welcome to website! 
+                </a>
+            </h2>
+            <p class="mar-top-1 mar-left-4 mar-bottom-1"> Ini adalah website latihan ke berapa? </p>
+            <img class="width-100" src="assets/school.jpg" alt="image 1366x578">
+        </div>
+        <!-- SECTION 2 -->
+        <div class="width-100 mar-bottom-4 border-bottom">
+            <h2 id="ourprofile">
+                <a href="#ourprofile" class="display-block cursor-default text-deco-none color-black font-size-2 font-bold mar-left-4">
+                    Our Profile
+                </a>
+            </h2>
+            <span class="display-block font-size-1 font-underline mar-left-4"> # About School </span>
+            <p class="mar-left-4 mar-top-1">
+                SMA Negeri 10 Kota Lele merupakan salah satu Sekolah Menengah Atas yang ada di Provinsi Ikan, Indonesia.  Sama dengan SMA pada umumnya di Indonesia masa pendidikan sekolah di sekolah ini ditempuh dalam waktu tiga tahun pelajaran, mulai dari Kelas X sampai Kelas XII.
+            </p>
+            <span class="display-block font-size-1 font-underline mar-left-4 mar-top-2"> # Vision </span>
+            <p class="mar-left-4 mar-top-1">
+                Religius, Berakhlak Mulia, Berkarakter, Berbudaya Lingkungan dan Berprestasi
+            </p>
+            <span class="display-block font-size-1 font-underline mar-left-4 mar-top-2"> # Mission </span>
+            <p class="mar-left-4 mar-top-1 mar-bottom-3">
+                <span class="display-block"> 1. Meningkatkan pembinaan keimanan, ketakwaan kepada Tuhan Yang Maha Esa dan Berakhlak Mulia </span>
+                <span class="display-block"> 2. Menumbuh kembangkan kepekaan sosial dan gotong royong </span>
+                <span class="display-block"> 3. Meningkatkan kreatifitas dan bernalar kritis </span>
+                <span class="display-block"> 4. Membiasakan perilaku hidup bersih dan sehat </span>
+                <span class="display-block"> 5. Meningkat prestasi di bidang akademik dan non akademik </span>
+            </p>
+        </div>
+        <!-- SECTION 3 -->
+        <div class="width-100 mar-bottom-4 border-bottom">
+            <h2 id="ourfacilities">
+                <a href="#ourfacilities" class="display-block cursor-default text-deco-none color-black font-size-2 font-bold mar-left-4">
+                    Our Facilities
+                </a>
+            </h2>
+            <p class="mar-left-4 mar-bottom-3">
+                Fasilitas sekolah merupakan salah satu faktor yang dapat menunjang keberhasilan proses kegiatan belajar mengajar (KBM). Fasilitas sekolah yang dimaksud adalah sarana dan prasarana pendidikan yang dapat dimanfaatkan oleh siswa dan guru dalam rangka mencapai tujuan pembelajaran yang telah ditentukan. 
+            </p>
+            <!-- facilities row 1 -->
+            <div class="display-flex display-block-s">
+                <div class="display-flex display-block-s align-items-top width-75 mar-bottom-3">
+                    <img class="mar-left-4 width-100" src="assets/lab_ipa.jpg" alt="lab_ipa">
+                    <p class="mar-left-2 mar-left-s-2"> 
+                        <span class="display-block font-bold"> Lab. IPA </span>
+                        merupakan Lab yang dispkan bagi siswa untuk melakukan praktikum terkait pembelajaran fisika, kimia dan biologi. 
+                    </p>
+                </div>
+                <div class="display-flex display-block-s align-items-top width-75 mar-bottom-3">
+                    <img class="mar-left-4 width-100" src="assets/lab_komputer.jpg" alt="lab_komputer">
+                    <p class="mar-left-2 mar-left-s-2"> 
+                        <span class="display-block font-bold"> Lab. Komputer </span>
+                        merupakan fasilitas yang disediakan oleh sekolah untuk menunjang terlaksananya Proses Kegiatan Belajar Mengajar.
+                    </p>
+                </div>
+            </div>
+            <!-- facilities row 2 -->
+            <div class="display-flex display-block-s mar-bottom-2">
+                <div class="display-flex display-block-s align-items-top width-75 mar-bottom-3">
+                    <img class="mar-left-4 width-100" src="assets/kantin.jpg" alt="kantin">
+                    <p class="mar-left-2 mar-left-s-2"> 
+                        <span class="display-block font-bold"> Kantin </span>
+                        Jam pelajaran yang diselengarakan hingga sore hari menuntut siswa dan guru harus tercukupi kebutuhan jasmaninya. 
+                    </p>
+                </div>
+                <div class="display-flex display-block-s align-items-top width-75 mar-bottom-3">
+                    <img class="mar-left-4 width-100" src="assets/sport_hall.png" alt="sport_hall">
+                    <p class="mar-left-2 mar-left-s-2"> 
+                        <span class="display-block font-bold"> Sport Hall </span>
+                        dibangun untuk memenuhi kebutuhan siswa dalam bidang olah-raga, khususnya olahraga seperti badminton & tenis meja. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- SECTION 4 -->
+        <div class="width-100 pad-bottom-4">
+            <h2 id="messageus">
+                <a href="#messageus" class="display-block cursor-default text-deco-none color-black font-size-2 font-bold mar-left-4">
+                    Message Us
+                </a>
+            </h2>
+            <div class="display-flex display-block-s flex-between width-75 width-s-75">
+                <!-- MESSAGE FORM -->
+                <form id="messageForm" name="messageForm" class="mar-left-4 mar-top-2 width-50 width-s-50" action="post">
+                    <div class="display-flex flex-between mar-bottom-1">
+                        <span> Name </span>
+                        <input type="text" class="width-50" name="name" id="name" placeholder="your name" required> 
+                    </div>
+                    <div class="display-flex flex-between mar-bottom-1">
+                        <span> Date of birth </span>
+                        <input type="date" class="width-50" name="dateofbirth" id="dateofbirth" required>
+                    </div>
+                    <div class="display-flex flex-between mar-bottom-1">
+                        <span> Gender </span>
+                        <div>
+                            <input type="radio" name="gender" id="gender-male" value="male" required>
+                            <label for="gender-male"> Male </label>
+                            <input type="radio" name="gender" id="gender-female" value="female" required>
+                            <label for="gender-female"> Female </label>
+                        </div>
+                    </div>
+                    <div class="display-flex flex-between mar-bottom-1">
+                        <span> Message </span>
+                        <textarea class="width-50" name="message" id="message" cols="20" rows="4" placeholder="your message" required></textarea>
+                    </div>
+                    <div class="display-flex flex-between">
+                        <span></span>
+                        <button class="width-50" type="submit"> Send </button>
+                    </div>
+                </form>
+                <!-- MESSAGE RESULT -->
+                <div class="mar-top-s-1 mar-left-4 pad-1 width-50 width-s-50 border border-s">
+                    <span> Form Result </span>
+                    <p id="formResult" class="mar-top-2"></p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- FOOTER -->
-    <footer>
-
+    <footer class="bg-blue border-top pad-3">
+        <div class="display-flex flex-end mar-left-4">
+            <span class="color-white font-size-1"> Created by Fattah Jundi </span>
+        </div>
     </footer>
 </body>
+
+<script src="js/main.js"></script>
 </html>
