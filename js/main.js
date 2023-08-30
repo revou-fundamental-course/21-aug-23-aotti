@@ -6,26 +6,52 @@ username.innerText = promptName
 // form submit event
 const messageForm = document.querySelector('#messageForm')
 const formResult = document.querySelector('#formResult')
+
+function filterInputs(type, input) {
+    // validate inputs
+    switch(type) {
+        case 'name':
+            // number is not allowed
+            if(input.value.match(/\d+/)) {
+                input.value = ''
+                input.placeholder = 'tidak boleh ada angka!'
+                input.style.boxShadow = '0 0 5px crimson'
+                setTimeout(() => {
+                    input.placeholder = 'ex: John Doe'
+                    input.style.boxShadow = ''
+                }, 2000);
+                return false
+            }
+            break
+        case 'email':
+            // email must be end with .com/net/org
+            if(!input.value.match(/.*(?=.com|.net|.org)/)) {
+                input.value = ''
+                input.placeholder = 'format email salah'
+                input.style.boxShadow = '0 0 5px crimson'
+                setTimeout(() => {
+                    input.placeholder = 'ex: abcd@email.com'
+                    input.style.boxShadow = ''
+                }, 2000);
+                return false
+            }
+            break
+    }
+}
+
 messageForm.addEventListener('submit', (ev) => {
     ev.preventDefault()
     // get form input values
     const form = document.forms['messageForm']
     const nameInput = form['name'].value
-    const dateofbirthInput = form['dateofbirth'].value
-    const genderInput = form['gender'].value
+    const emailInput = form['email'].value
+    const phoneNumberInput = form['phonenumber'].value
     const messageInput = form['message'].value 
-    // check if username include any number
-    if(nameInput.match(/\d+/)) {
-        form['name'].value = ''
-        form['name'].placeholder = 'tidak boleh ada angka!'
-        form['name'].style.boxShadow = '0 0 5px crimson'
-        return setTimeout(() => {
-            form['name'].placeholder = 'your name'
-            form['name'].style.boxShadow = ''
-        }, 2000);
-    }
+    // validate inputs
+    if(filterInputs('name', form['name']) === false) return
+    if(filterInputs('email', form['email']) === false) return
     // display input result
-    const textResult = `Submit time: ${new Date()}\n\nName: ${nameInput}\nDate of Birth: ${dateofbirthInput}\nGender: ${genderInput}\nMessage: ${messageInput}`
+    const textResult = `Submit time: ${new Date()}\n\nName: ${nameInput}\nDate of Birth: ${emailInput}\nGender: ${phoneNumberInput}\nMessage: ${messageInput}`
     formResult.innerText = textResult
 })
 
